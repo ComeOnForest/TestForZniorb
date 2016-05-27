@@ -9,19 +9,8 @@ file_text = file.read()
 questions = re.findall('\d..+[:?]',file_text)
 answers = re.findall('\n.\).+',file_text)
 right_answers = re.findall('==ОТВЕТ:(?P<p>\w+)',file_text)
-print(questions)
-print((len(right_answers)))
-print((len(answers)))
-print((len(questions)))
-for question in questions:
 
-    #
-    # print(("\n{'question' : '" + question.replace('\n','') + "'," +
-    #        "\n'answer1' : '" + answers[i].replace('\n', '') + "'," +
-    #        "\n'answer2': '" + answers[i + 1].replace('\n', '') + "',"+
-    #        "\n'answer3' : '" + answers[i + 2].replace('\n', '') + "',"+
-    #        "\n'answer4' : '" + answers[i + 3].replace('\n', '') + "',"+
-    #        "\n'right' : '" + right_answer + "',},"))
+for question in questions:
 
     output_file.write(("\n{'question' : '" + question.replace('\n','') + "'," +
            "\n'answer1' : '" + answers[i].replace('\n', '') + "'," +
